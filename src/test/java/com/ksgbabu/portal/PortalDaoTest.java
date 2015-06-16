@@ -12,7 +12,7 @@ public class PortalDaoTest{
   @Test
   public void testSave(){
     Portal portal = new Portal();
-    portal.setPortalName("myportal");
+    portal.setPortalName("myportal-with-jk");
     dao.save(portal);
   }
 

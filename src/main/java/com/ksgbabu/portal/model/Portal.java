@@ -16,6 +16,7 @@ public class Portal {
 
   private String portalName;
 
+
   public String getPortalId() {
     return portalId;
   }
