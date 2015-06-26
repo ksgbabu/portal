@@ -1,7 +1,7 @@
 /*
- * Mosaic
+ * Portal
  *
- * Copyright 2011 Corelogic Ltd All Rights Reserved.
+ * Copyright 2011 Innoventlabs Ltd All Rights Reserved.
  */
 package com.ksgbabu.portal.repository;
 
