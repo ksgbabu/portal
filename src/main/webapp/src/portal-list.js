@@ -7,16 +7,18 @@ import {HttpClient} from 'aurelia-http-client';
 
 export class portalList{
 
-  heading = 'portal list';
+  heading = 'Portal list:';
   portals = []
 
+  static inject = [HttpClient];
   constructor(http){
     this.http = http;
   }
 
   activate(){
-    this.http.get('/portals').then( response => {
-        this.portals = response.content.items;
+    this.http.get('/portal/rest/portals').then( response => {
+        this.portals = response.content;
+      console.log( 'response'+ response.content);
       });
   }
 

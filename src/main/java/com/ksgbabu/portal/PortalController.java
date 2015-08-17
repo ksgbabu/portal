@@ -10,15 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/portal")
+@RequestMapping(value = "/")
 public class PortalController {
 
-  @RequestMapping(value = "/list",produces = "application/json",method = RequestMethod.GET)
+  @RequestMapping(value = "/portals",produces = "application/json",method = RequestMethod.GET)
   public List listPortals() {
     ArrayList<Portal> portals = new ArrayList();
     Portal portal = new Portal();
     portal.setPortalId("1");
     portal.setPortalName("first");
+    portals.add(portal);
+    portal = new Portal();
+    portal.setPortalId("1");
+    portal.setPortalName("second");
     portals.add(portal);
     return portals;
 

@@ -1,9 +1,11 @@
 node_modules
 jspm_packages
 bower_components
-.idea
+.idea/*
 .DS_STORE
 /dist
-.gradle
 build
+.gradle
 out
+data
+.gitignore
