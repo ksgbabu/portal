@@ -11,10 +11,11 @@ import org.springframework.data.mongodb.core.MongoOperations;
 
 public class BaseDao {
 
+  ApplicationContext context = new AnnotationConfigApplicationContext(MongoConfig.class);
+  MongoOperations operations = (MongoOperations) context.getBean("mongoTemplate");
+
   public MongoOperations mongoOperation(){
 
-    ApplicationContext context = new AnnotationConfigApplicationContext(MongoConfig.class);
-    MongoOperations operations = (MongoOperations) context.getBean("mongoTemplate");
     return operations;
 
   }
