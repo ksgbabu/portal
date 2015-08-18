@@ -5,7 +5,7 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 
-export class portalList{
+export class PortalList{
 
   heading = 'Portal list:';
   portals = []

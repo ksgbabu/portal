@@ -1,0 +1,26 @@
+<template>
+  <section>
+  <form class="form-horizontal">
+    <legend>Create Activity Type:</legend>
+    <div class="input-group">
+      <label class="control-label" for="activityType">
+        Activity Type:
+      </label>
+      <input class="control-box input-sm" size="50" type="text" name="activity-type" value.bind="activityType"></input>
+    </div>
+    <button type="submit" click.delegate="submit()" class="btn-primary">Submit</button>
+  </form>
+  </section>
+  ${getActivityTypes()}
+  <section>
+    <div>
+      <div class="page-header">
+      Activity Types:
+      </div>
+      <div repeat.for="activityType of activityTypes" class="col-sm-2">
+        ${activityType.name}
+      </div>
+    </div>
+  </section>
+
+</template>
