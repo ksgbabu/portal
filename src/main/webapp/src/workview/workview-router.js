@@ -8,8 +8,8 @@ export class WorkviewRouter{
   configureRouter(config, router){
 
     config.map([
-      { route: ['','workview'],  name: 'workview',       moduleId: 'workview/workview',       nav: true, title:'Workview' },
-      { route: 'users',         name: 'users',         moduleId: 'users',         nav: true, title:'Github Users' },
+      { route: ['','progressing-work'],  name: 'progressing-work',       moduleId: 'workview/progressing-work',       nav: true, title:'Progressing Items' },
+      { route: ['new-work'],  name: 'new-work',       moduleId: 'workview/new-work',       nav: true, title:'New Items' }
     ]);
 
 

@@ -1,15 +1,26 @@
 apply plugin: 'java'
 apply plugin: 'war';
+apply plugin: 'idea'
 
 buildscript {
     repositories {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+      jcenter()
     }
     dependencies {
-        classpath "com.bmuschko:gradle-tomcat-plugin:2.2.2"
+      classpath "com.bmuschko:gradle-tomcat-plugin:2.2.2"
+      classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE"
+      classpath 'org.springframework:springloaded:1.2.0.RELEASE'
     }
+}
+
+idea {
+  module {
+    inheritOutputDirs = false
+    outputDir = file("$buildDir/classes/main/")
+  }
 }
 
 apply plugin: 'com.bmuschko.tomcat'
@@ -24,7 +35,7 @@ repositories {
 dependencies {
    testCompile group: 'junit', name: 'junit', version: '4.11'
    compile 'org.springframework.data:spring-data-mongodb:1.7.0.RELEASE'
-   compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+   compile 'org.springframework:spring-webmvc:4.1.7.RELEASE'
    compile 'org.mongodb:mongo-java-driver:3.0.2'
    compile 'org.springframework.data:spring-data-jpa:1.8.0.RELEASE'
    compile 'org.springframework.data:spring-data-mongodb:1.7.0.RELEASE'

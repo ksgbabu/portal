@@ -1,9 +1,9 @@
 package com.ksgbabu.portal;
 
-import java.util.List;
-
 import com.ksgbabu.portal.model.Portal;
 import org.junit.Test;
+
+import java.util.List;
 
 public class PortalDaoTest{
 
@@ -12,7 +12,7 @@ public class PortalDaoTest{
   @Test
   public void testSave(){
     Portal portal = new Portal();
-    portal.setPortalName("myportal-with-jk");
+    portal.setPortalName("complex-portal");
     dao.save(portal);
   }
 

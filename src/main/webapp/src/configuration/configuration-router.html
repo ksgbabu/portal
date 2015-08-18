@@ -1,0 +1,17 @@
+<template>
+  <section>
+    <div>
+      <div class="page-header">${heading}</div>
+      <div class="col-md-2">
+        <ul class="well nav nav-pills nav-stacked">
+          <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+            <a href.bind="row.href">${row.title}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6" style="padding: 0">
+        <router-view></router-view>
+      </div>
+    </div>
+  </section>
+</template>

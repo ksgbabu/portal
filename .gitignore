@@ -5,7 +5,8 @@ bower_components
 .DS_STORE
 /dist
 build
-.gradle
+.gradle/*
 out
-data/
+data/*
 .gitignore
+src/main/webapp/dist/*

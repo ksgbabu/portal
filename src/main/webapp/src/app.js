@@ -12,9 +12,10 @@ export class App {
   configureRouter(config, router){
     config.title = 'ksgportal';
     config.map([
-      { route: '', moduleId: 'portal-list', nav: true, title:'Portal List' },
+      { route: ['','portal-list'], moduleId: 'portal-list/portal-list', nav: true, title:'Portal List' },
       { route: 'about', moduleId: 'about', nav: true, title:'About' },
-      { route: 'workview',  name: 'workview', moduleId: 'workview/workview-router', nav: true, title:'Work View' }
+      { route: 'workview',  name: 'workview', moduleId: 'workview/workview-router', nav: true, title:'Work View' },
+      { route: 'configure-template', name: 'configure-template', moduleId: 'configuration/configuration-router', nav: true, title:'Configure' }
     ]);
 
     this.router = router;
